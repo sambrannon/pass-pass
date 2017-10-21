@@ -1,0 +1,52 @@
+.button {
+  display: inline-block;
+  border: solid 0.2rem $black;
+  border-radius: 0.4rem;
+  background-color: $black;
+  color: $white;
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 1.2rem 2rem;
+  cursor: pointer;
+
+  &.button--submit {
+    border-color: darken($green, 10%);
+    background-color: $green;
+  }
+
+  &.button--wide {
+    display: block;
+    width: 100%;
+  }
+
+  &.button--with-radio {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    color: $black;
+    position: relative;
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+
+      &:checked + label {
+        background-color: $black;
+        color: $white;
+      }
+    }
+
+    label {
+      background-color: $white;
+      color: $black;
+      border: solid 0.2rem $black;
+      padding: 1.2rem 2rem;
+      border-radius: 0.4rem;
+      display: block;
+      cursor: pointer;
+    }
+  }
+}

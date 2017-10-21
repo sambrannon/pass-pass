@@ -1,2 +1,35 @@
-%h1 Welcome#index
-%p Find me in app/views/welcome/index.html.haml
+%h1.logo
+  = link_to 'Pass Pass', root_path, class: 'logo__link'
+
+%form
+
+  %label.label.label--spaced= "Enter password"
+
+  %input.field{type: 'text'}
+
+  %p.note= "For increased security, do not type anything other than a password into this field"
+
+  %label.label.label--spaced= "Automatically delete password after"
+
+  .button-group
+    .button.button--with-radio
+      %input{type: 'radio', id: 'radio01', name: 'radiogroup1', checked: true}
+      %label{for: 'radio01'}
+        = "1 Hour"
+    .button.button--with-radio
+      %input{type: 'radio', id: 'radio02', name: 'radiogroup1'}
+      %label{for: 'radio02'}
+        = "1 Day"
+
+  .checkbox.checkbox--spaced
+    %input{type: 'checkbox', id: 'checkbox01', checked: true}
+    %label{for: 'checkbox01'}
+      = "Allow viewers to delete password when finished"
+
+  %input.button.button--submit.button--wide{type: 'submit', value: 'Submit'}
+
+  %ul.notes
+    %li.note= "All passwords are automatically deleted after one week"
+    %li.note= "All passwords are encrypted prior to storage and are available to only those with the secret link."
+    %li.note= "Once expired, encrypted passwords are unequivocally deleted from the database."
+

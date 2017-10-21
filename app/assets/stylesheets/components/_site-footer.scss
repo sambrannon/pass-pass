@@ -1,0 +1,16 @@
+.site-footer {
+  margin-top: 3rem;
+}
+
+.site-footer__links {
+  font-size: 1.8rem;
+}
+
+.site-footer__link {
+  color: $black;
+  text-decoration: none;
+
+  &:hover {
+    color: lighten($black, 30%);
+  }
+}
