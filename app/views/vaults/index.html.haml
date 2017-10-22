@@ -1,11 +1,11 @@
 %h1.logo
   = link_to 'Pass Pass', root_path, class: 'logo__link'
 
-%form
+= form_for(Vault.new) do |f|
 
   %label.label.label--spaced= "Enter password"
 
-  %input.field{type: 'text'}
+  = f.text_field :password, class: 'field'
 
   %p.note= "For increased security, do not type anything other than a password into this field"
 
@@ -26,7 +26,7 @@
     %label{for: 'checkbox01'}
       = "Allow viewers to delete password when finished"
 
-  %input.button.button--submit.button--wide{type: 'submit', value: 'Submit'}
+  = f.submit 'Submit', class: 'button button--submit button--wide'
 
   %ul.notes
     %li.note= "All passwords are automatically deleted after one week"
