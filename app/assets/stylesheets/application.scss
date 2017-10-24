@@ -1,5 +1,6 @@
 // Vendor
 @import 'normalize';
+@import 'password-strength-meter/dist/password.min';
 
 // Tools
 @import 'tools/variables';
@@ -16,4 +17,5 @@
 @import 'components/label';
 @import 'components/logo';
 @import 'components/note';
+@import 'components/password-meter';
 @import 'components/site-footer';

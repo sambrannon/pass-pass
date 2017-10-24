@@ -13,4 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require password-strength-meter/dist/password.min.js
+
 //= require_tree .

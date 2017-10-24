@@ -1,0 +1,11 @@
+{
+  "name": "pass-pass",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:sambrannon/pass-pass.git",
+  "author": "Sam Brannon <sam@sambrannon.com>",
+  "license": "MIT",
+  "dependencies": {
+    "password-strength-meter": "^1.2.1"
+  }
+}
