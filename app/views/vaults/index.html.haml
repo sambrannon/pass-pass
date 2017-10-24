@@ -7,18 +7,22 @@
 
   = f.text_field :password, class: 'field'
 
-  %p.note= "For increased security, do not type anything other than a password into this field"
+  %p.note.mt-1.mb-3= "For increased security, do not type anything other than a password into this field"
 
   %label.label.label--spaced= "Automatically delete password after"
 
   .button-group
     .button.button--with-radio
-      %input{type: 'radio', id: 'radio01', name: 'radiogroup1', checked: true}
+      %input{type: 'radio', id: 'radio01', name: 'radiogroup1'}
       %label{for: 'radio01'}
+        = "10 Min"
+    .button.button--with-radio
+      %input{type: 'radio', id: 'radio02', name: 'radiogroup1', checked: true}
+      %label{for: 'radio02'}
         = "1 Hour"
     .button.button--with-radio
-      %input{type: 'radio', id: 'radio02', name: 'radiogroup1'}
-      %label{for: 'radio02'}
+      %input{type: 'radio', id: 'radio03', name: 'radiogroup1'}
+      %label{for: 'radio03'}
         = "1 Day"
 
   .checkbox.checkbox--spaced
@@ -28,8 +32,8 @@
 
   = f.submit 'Submit', class: 'button button--submit button--wide'
 
-  %ul.notes
-    %li.note= "All passwords are automatically deleted after one week"
-    %li.note= "All passwords are encrypted prior to storage and are available to only those with the secret link."
-    %li.note= "Once expired, encrypted passwords are unequivocally deleted from the database."
+  %ul.notes.mt-3.mb-3
+    %li.note= "Passwords are automatically deleted after one week."
+    %li.note= "Passwords are encrypted prior to storage and are available to only those with the URL."
+    %li.note= "Once expired, encrypted passwords are fully deleted from the database."
 
