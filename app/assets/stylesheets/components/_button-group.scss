@@ -3,6 +3,11 @@
 
   .button {
     flex: 1;
+    margin-right: -0.2rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   .button--with-radio {

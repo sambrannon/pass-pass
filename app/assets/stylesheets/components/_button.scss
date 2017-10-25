@@ -12,6 +12,8 @@
   &.button--submit {
     border-color: darken($green, 10%);
     background-color: $green;
+    border-width: 0;
+    border-bottom-width: 0.2rem;
   }
 
   &.button--wide {

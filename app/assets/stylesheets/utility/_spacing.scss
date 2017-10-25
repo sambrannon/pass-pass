@@ -1,0 +1,46 @@
+$spacing: 1rem;
+
+$attributes: (
+  p: padding,
+  m: margin
+);
+
+$directions: (
+  t: -top,
+  r: -right,
+  b: -bottom,
+  l: -left
+);
+
+$sizes: (
+  0: 0,
+  xs: 0.25,
+  s: 0.5,
+  l: 2,
+  xl: 4
+);
+
+@each $attr, $attribute in $attributes {
+
+  // simple resets
+  .#{$attr}-0 {
+    #{$attribute}: 0;
+  }
+
+  @each $dir, $direction in $directions {
+
+    // normal/default sizes
+    .#{$attr}#{$dir}-half {
+      #{$attribute}#{$direction}: $spacing * 0.5;
+    }
+
+    // additional sizes
+    @for $i from 1 through 6 {
+      .#{$attr}#{$dir}-#{$i} {
+        #{$attribute}#{$direction}: $spacing * $i;
+      }
+    }
+
+  }
+
+}
