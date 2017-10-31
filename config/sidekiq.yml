@@ -1,0 +1,4 @@
+:schedule:
+  password_cleaner:
+    cron: '0 */5 * * * *'   # Runs once every 5 minutes
+    class: PasswordCleaner
